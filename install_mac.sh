@@ -1,2 +1,2 @@
-sudo apt install sox
+sudo port install sox
 python3 -m pip install -e . --user

@@ -1,8 +1,8 @@
 # Pomodoro CLI
-The Pomodoro Command Line Interface (CLI) is a productivity application that will help you in getting things done!
+The Pomodoro Command Line Interface (CLI) is a lightweight productivity application for Linux / Mac that will help you in getting things done!
 
 ![size](https://img.shields.io/github/repo-size/kobej1/pomodoroCLI?color=brightgreen&logoColor=green "Repo size")
-![python](https://img.shields.io/static/v1?label=python&message=3.5|3.6|3.7&color=blueviolet "Python Version")
+![python](https://img.shields.io/static/v1?label=python&message=>=3.5&color=blueviolet "Python Version")
 
 ***Github***<br>
 &nbsp;&nbsp;&nbsp;&nbsp;https://github.com/kobej1/pomodoroCLI
@@ -33,10 +33,18 @@ $ git clone https://github.com/kobej1/pomodoroCLI
 ```
 
 ### Install pomodoroCLI
-Go inside the pomodoroCLI folder (which you normally cloned in the previous step). Then let's install the application by running *sh install.sh*.
+Go inside the pomodoroCLI folder (which you normally cloned in the previous step). Then we make the install file executable, so that we now can install the package.
+
+**Debian / Ubuntu / Linux Mint:**
 ```bash
-$ cd pomodoroCLI
-$ sh install.sh
+$ chmod +x install.sh
+$ sudo -H ./install.sh
+```
+
+**Mac:**
+```bash
+$ chmod +x install_mac.sh
+$ sudo -H ./install_mac.sh
 ```
 
 ### Start pomodoroCLI
@@ -65,13 +73,13 @@ $ pomodoro 20 3
 ```
 
 ## Features
-✔️ Pomodor timer<br>
-✔️ Changeable values for pomodoro timer<br>
+✔️ Basic pomodoro timer<br>
+✔️ Changeable values for the different cycles<br>
+✔️ Noticeable alarm sound<br>
 
 ## Upcoming Features
-
+📝 Statitics (*Work in progress*)<br>
 📝 Error handling & help messages<br>
-📝 Statitics<br>
 📝 Settings<br>
 📝 Chart<br>
 

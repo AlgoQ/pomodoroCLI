@@ -8,5 +8,5 @@ setup(
             'pomodoro = pomodoroCLI.__main__:main'
         ]
     },
-    install_requires=[]
+    install_requires=["numpy", "pandas"]
     )

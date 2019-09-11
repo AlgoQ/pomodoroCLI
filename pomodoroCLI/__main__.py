@@ -1,20 +1,23 @@
-import sys
-from .ArgParser import ArgParse
-from .CycMan import CycMan
+import sys, os.path
+from pomodoroCLI.classes import ArgParser, CycMan, StatMan
+from pomodoroCLI import checkDir as cd, paths as p
+
 
 def main():
-    # parser = argparse.ArgumentParser()
+	homePath = p.getHomePath()
+	cd.checkDir(homePath)
+	
+	args = sys.argv[1:]
+	parser = ArgParser.ArgParser(args)
 
-    args = sys.argv[1:]
-    parser = ArgParse(args)
+	returnDict = parser.eventHandler()
+	
+	if returnDict["event"] == "r":
+		cycMan = CycMan.CycMan(returnDict["workCyc"], returnDict["relCyc"], returnDict["bigRelCyc"])
+		cycMan.cycle()
+	elif returnDict["event"] == "st":
+		statMan = StatMan.StatMan(returnDict["timePer"])
+		statMan.periodHandler()
 
-    returnDict = parser.eventHandler()
-    
-    if returnDict["event"] == "r":
-        timer = CycMan(returnDict["workCyc"], returnDict["relCyc"], returnDict["bigRelCyc"])
-        timer.cycle()
-
-    
-    
 if __name__ == '__main__':
-    main()
+	main()

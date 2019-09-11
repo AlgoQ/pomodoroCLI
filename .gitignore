@@ -1,3 +1,7 @@
 test
+*test*
+*Test*
 pomodoroCLI.egg*
-*pychache*
+*cache*
+.vscode
+TODO.md

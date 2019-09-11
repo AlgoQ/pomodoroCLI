@@ -1,7 +1,7 @@
 import sys
 from pomodoroCLI import CONSTS
 
-class ArgParse:
+class ArgParser:
     def __init__(self, args):
         self.args = args
     
@@ -29,27 +29,37 @@ class ArgParse:
             if opts == []:
                 return returnDict
             elif len(opts) == 1:
-                returnDict["workCyc"] = opts[0]
-
+                returnDict["workCyc"] = int(opts[0])
                 return returnDict
-            elif len(opts) == 2:
-                returnDict["workCyc"] = opts[0]
-                returnDict["relCyc"] = opts[1]
-
-                return returnDict
-            elif len(opts) == 3:
-                returnDict["workCyc"] = opts[0]
-                returnDict["relCyc"] = opts[1]
-                returnDict["bigRelCyc"] = opts[2]
                 
+            elif len(opts) == 2:
+                returnDict["workCyc"] = int(opts[0])
+                returnDict["relCyc"] = int(opts[1])
                 return returnDict
+
+            elif len(opts) == 3:
+                returnDict["workCyc"] = int(opts[0])
+                returnDict["relCyc"] = int(opts[1])
+                returnDict["bigRelCyc"] = int(opts[2])
+                return returnDict
+                
             else:
                 returnDict["errorType"] = event
-
                 return returnDict
             
         elif event == "st":
-            pass
+            if opts == []:
+                returnDict["timePer"] = "w"
+                return returnDict
+            
+            elif len(opts) == 1:
+                returnDict["timePer"] = opts[0]
+                return returnDict
+            
+            else:
+                returnDict["errorType"] = event
+                return returnDict
+            
         elif event == "c":
             pass
         elif event == "se":
