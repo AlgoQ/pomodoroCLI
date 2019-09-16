@@ -19,6 +19,7 @@ class CycMan: # CycleManager
 		if self.cycCounter == 1:
 			self.workCycle()
 		else:
+			als.doubleAlarmSound()
 			enter = input("Press enter to start a new cycle...")
 			if enter == "":
 				print("\n")
