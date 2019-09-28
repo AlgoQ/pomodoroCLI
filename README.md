@@ -37,12 +37,14 @@ Go inside the pomodoroCLI folder (which you normally cloned in the previous step
 
 **Debian / Ubuntu / Linux Mint:**
 ```bash
+$ cd pomodoroCLI
 $ chmod +x install.sh
 $ sudo -H ./install.sh
 ```
 
 **Mac:**
 ```bash
+$ cd pomodoroCLI
 $ chmod +x install_mac.sh
 $ sudo -H ./install_mac.sh
 ```
