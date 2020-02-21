@@ -42,6 +42,13 @@ $ chmod +x install.sh
 $ sudo -H ./install.sh
 ```
 
+**Manjaro:**
+```bash
+$ cd pomodoroCLI
+$ chmod +x install_manjaro.sh
+$ sudo -H ./install_manjaro.sh
+```
+
 **Mac:**
 ```bash
 $ cd pomodoroCLI
